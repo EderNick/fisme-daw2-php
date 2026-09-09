@@ -9,8 +9,8 @@ use \bo\Persona as PersonaBO;
 
 $personasBO = new PersonaBO();
 echo "<h3> Personas de DAO   :</h3>";
-foreach ($personasBO->obtenerPersonas() as $arr) {
-    echo $arr->mostrarDatos() . "<br>";
+foreach ($personasBO->obtenerPersonas() as $persona) {
+    echo $persona->mostrarDatos() . "<br>";
 }
 
 /*
