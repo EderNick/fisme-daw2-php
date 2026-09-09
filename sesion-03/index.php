@@ -1,13 +1,19 @@
 <?php
 require "./dao/Persona.php";
+require "./dto/Persona.php";
+require "./bo/Persona.php";
 // include "./Persona.php";
-require "./dto/Estudiante.php";
+// require "./dto/Estudiante.php";
 
-$persona1 = new Persona();
-echo "<h3> Datos de Persona 1 :</h3>";
-echo $persona1->mostrarDatos();
+use \bo\Persona as PersonaBO;
 
+$personasBO = new PersonaBO();
+echo "<h3> Personas de DAO   :</h3>";
+foreach ($personasBO->obtenerPersonas() as $arr) {
+    echo $arr->mostrarDatos() . "<br>";
+}
 
+/*
 $persona2 = new Persona("Eder", "Figueroa", 30);
 echo "<h3> Datos de Persona 2 :</h3>";
 echo $persona2->mostrarDatos();
@@ -20,15 +26,15 @@ echo "<br>";
 $persona3->setNombre("Raul");
 echo $persona3->mostrarDatos();
 
-
+*/
 
 echo "<br><br>######################################################<br><br>";
 
 
 
 
-
-$objEstud1 = new Estudiante();
+/*
+$objEstud1 = new EstudianteDTO();
 $objEstud1->setNombre("Rosa");
 $objEstud1->setApellido("Vasquez");
 $objEstud1->setEdad(25);
@@ -39,3 +45,4 @@ $objEstud1->set("regular", true);
 $objEstud1->set("creditosMatriculados", 20);
 
 echo nl2br($objEstud1->getDatos());
+*/

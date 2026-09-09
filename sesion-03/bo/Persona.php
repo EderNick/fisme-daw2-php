@@ -1,6 +1,6 @@
 <?php
 
-namespace negocio;
+namespace bo;
 
 use \dao\Persona as PersonaDAO;
 use \dto\Persona as PersonaDTO;
@@ -9,7 +9,10 @@ class Persona
 {
     private $arrPersonas = [];
 
-    public function obtenerPersonas()
+    /**
+     * @return PersonaDTO[]
+     */
+    public function obtenerPersonas(): array
     {
         $objPersonaDao = new PersonaDAO();
 
@@ -22,10 +25,10 @@ class Persona
                 $objP->setNombre($elem["nombre"]);
                 $objP->setApellido($elem["apellido"]);
                 $objP->setEdad($elem["edad"]);*/
-                //Las líneas de código 21-24 es lo mismo a las líneas 26-32:
+                //Las líneas de código 21-24 es lo mismo a las líneas 28-31:
                 array_push(
                     $this->arrPersonas,
-                    new PersonaDAO(
+                    new PersonaDTO(
                         $elem["nombre"],
                         $elem["apellido"],
                         $elem["edad"]

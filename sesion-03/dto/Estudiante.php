@@ -1,5 +1,10 @@
 <?php
-class Estudiante extends Persona
+
+namespace dto;
+
+use \dto\Persona as PersonaDTO;
+
+class Estudiante extends PersonaDTO
 {
     private $codigoUniv;
     private $carrera;
