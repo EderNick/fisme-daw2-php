@@ -9,9 +9,6 @@ class Persona
 {
     private $arrPersonas = [];
 
-    /**
-     * @return PersonaDTO[]
-     */
     public function obtenerPersonas(): array
     {
         $objPersonaDao = new PersonaDAO();
