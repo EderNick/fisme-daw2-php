@@ -13,6 +13,7 @@
     <nav>
         <ul>
             <li><a href="<?= BASE_URL . '/usuarios' ?>">Gestionar Usuarios</a></li>
+            <li><a href="<?= BASE_URL . '/clientes' ?>">Gestionar Clientes</a></li>
         </ul>
     </nav>
 
