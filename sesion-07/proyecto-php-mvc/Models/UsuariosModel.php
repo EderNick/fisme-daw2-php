@@ -1,21 +1,24 @@
 <?php
 
-class UsuariosModel
+class UsuariosModel extends Model
 {
     private $conexion;
 
     public function __construct()
     {
-        try {
+        /*try {
             $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME;
             $this->conexion = new \PDO($dsn, DB_USER, DB_PASS);
             $this->conexion->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         } catch (\PDOException $e) {
             throw $e;
-        }
+        }*/
+
+        parent::__construct();
+        $this->table = "usuarios";
     }
 
-    public function getUsuarios()
+    /*public function getUsuarios()
     {
         $sql = "SELECT * FROM usuarios WHERE estado = 1";
         try {
@@ -29,5 +32,5 @@ class UsuariosModel
         } catch (\PDOException $e) {
             throw $e;
         }
-    }
+    }*/
 }

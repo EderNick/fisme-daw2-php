@@ -43,7 +43,10 @@ class Model extends Conexion
         foreach ($data as $key => $value) {
             $stmt->bindValue(":{$key}", $value);
         }
-        return $stmt->execute();
+        if ($stmt->execute()) {
+            return $this->connect()->lastInsertId();
+        }
+        return false;
     }
 
     public function update($id, $data)

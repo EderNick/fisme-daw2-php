@@ -12,6 +12,7 @@
         Gestionar Clientes
     </h1>
 
+    <a href="<?= BASE_URL ?>/clientes/registrar">Nuevo Cliente</a>
     <table border="1">
         <thead>
             <tr>
