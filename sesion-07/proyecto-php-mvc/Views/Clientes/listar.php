@@ -29,12 +29,18 @@
                     <td>
                         <a href="<?= BASE_URL . "/clientes/ver/" . $c["id"] ?>">Ver</a>
                         <a href="<?= BASE_URL . "/clientes/editar/" . $c["id"] ?>">Editar</a>
-                        <a href="<?= BASE_URL . "/clientes/eliminar/" . $c["id"] ?>">Eliminar</a>
+                        <a
+                            href="<?= BASE_URL . "/clientes/eliminar/" . $c["id"] ?>"
+                            class="btn-eliminar">
+                            Eliminar
+                        </a>
                     </td>
                 </tr>
             <?php endforeach ?>
         </tbody>
     </table>
+
+    <script src="<?= BASE_URL ?>/Assets/js/Clientes/listar.js"></script>
 </body>
 
 </html>
