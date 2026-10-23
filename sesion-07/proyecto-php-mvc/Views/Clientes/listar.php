@@ -28,8 +28,8 @@
                     <td><?= $c["email"] ?></td>
                     <td>
                         <a href="<?= BASE_URL . "/clientes/ver/" . $c["id"] ?>">Ver</a>
-                        <a href="#">Editar</a>
-                        <a href="#">Eliminar</a>
+                        <a href="<?= BASE_URL . "/clientes/editar/" . $c["id"] ?>">Editar</a>
+                        <a href="<?= BASE_URL . "/clientes/eliminar/" . $c["id"] ?>">Eliminar</a>
                     </td>
                 </tr>
             <?php endforeach ?>

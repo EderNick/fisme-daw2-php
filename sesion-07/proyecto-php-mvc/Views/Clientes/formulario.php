@@ -9,7 +9,7 @@
 
 <body>
     <h1>Registar Cliente</h1>
-    <form method="post" action="<?= BASE_URL ?>/clientes/guardar">
+    <form method="post" action="<?= BASE_URL ?>/clientes/guardar" autocomplete="off">
         <label for="apellidos">Apellidos:</label>
         <input type="text" name="apellidos" required>
         <br>
